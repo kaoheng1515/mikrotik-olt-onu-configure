@@ -15,7 +15,7 @@ Huawei OLTs are reliable for GPON but more complex than BDCOM—use CLI (Telnet/
 
 ```mermaid
  flowchart TD
-    Internet[Internet<br>Real Public IP or CGNAT] -->|Fiber / Ethernet| MK[MikroTik Router<br>CCR2004 / RB4011<br><br>ether1 = WAN<br>ether2 = SFP+ Trunk to OLT<br>All customer VLANs tagged]
+    Internet[Internet<br>Real Public IP or CGNAT] -->|Fiber Cable| MK[MikroTik Router<br>CCR2004 / RB4011<br><br>SPF1 = WAN<br>SPF2 = Trunk to OLT<br>All customer VLANs tagged]
     
     MK -->|VLAN 100 tagged<br>DHCP Server on vlan100<br>IP pool 192.168.100.0/24| OLT[Huawei MA5608T OLT<br>GE0/1/0 = Trunk uplink<br>Allow VLAN 100 and VLAN 999 mgmt<br>Management IP 192.168.99.2]
     
