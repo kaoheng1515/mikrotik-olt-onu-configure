@@ -11,6 +11,7 @@ Huawei OLTs are reliable for GPON but more complex than BDCOM—use CLI (Telnet/
 - **Torch & Packet Sniffer:**  Find who downloads torrent 24h very fast
 - **VLAN per customer**  No broadcast storm, very secure
 
+## Works Flow
 ```mermaid
 flowchart LR
     A["MikroTik Router<br>ether2 (Trunk)<br>VLAN 100 = Internet<br><br>IP: 192.0.2.1/24<br>Gateway: OLT 192.0.2.2"]
