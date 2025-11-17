@@ -26,6 +26,7 @@ flowchart TD
     
     ONU1 --> Customer1[Customer Wi-Fi Router<br>or PC Direct]
 
+    %% ---- STYLES ----
     style MK fill:#dc2626,color:white
     style OLT fill:#2563eb,color:white
     style ONU1 fill:#16a34a,color:white
