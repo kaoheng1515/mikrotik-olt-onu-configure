@@ -40,7 +40,7 @@ Huawei OLTs are reliable for GPON but more complex than BDCOM—use CLI (Telnet/
     OLT -->|PON| SPL[Splitter 1:32 or 1:64]
     SPL --> ONU1[ONU1 → VLAN1001] --> C1[Customer1]
     SPL --> ONU2[ONU2 → VLAN1002] --> C2[Customer2]
-    SPL -->|…| ONU3[ONUn → VLAN1002] --> Cn[Customer3]
+    SPL -->|…| ONU3[ONUn → VLAN1003] --> Cn[Customer3]
 
     style MK fill:#dc2626,color:#fff
     style OLT fill:#2563eb,color:#fff
