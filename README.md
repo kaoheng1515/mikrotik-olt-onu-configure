@@ -5,7 +5,14 @@ Huawei OLTs are reliable for GPON but more complex than BDCOM—use CLI (Telnet/
 
 ### Why Huawei OLT
 **Goal:** 
-- **Easy and powerful billing** MikroTik PPPoE + User-Manager/RADIUS → you can limit speed, data quota, expire date, auto-cut, Hotspot page, etc. Very easy for small ISP.
-- **VLAN per customer = very secure** Each house has its own VLAN → no one can see neighbor traffic, no ARP spoofing, no virus spread between customers.
-- **Full control** You control everything from one MikroTik box: queue, firewall, NAT, hotspot, monitoring, graphs, API for billing software (PPPoE + MikroTik API is used by almost all local billing softwares in Cambodia: CamISP, SoftPOS, SmartBilling, etc.).
-- **Scalability**  Start with 1 OLT 8 PON ports → 512 customers. Add more OLT later, just connect new OLT to another port on MikroTik, same configuration.
+- **Easy and powerful billing:** MikroTik PPPoE + User-Manager/RADIUS → you can limit speed, data quota, expire date, auto-cut, Hotspot page, etc. Very easy for small ISP.
+- **VLAN per customer = very secure:** Each house has its own VLAN → no one can see neighbor traffic, no ARP spoofing, no virus spread between customers.
+- **Full control:** You control everything from one MikroTik box: queue, firewall, NAT, hotspot, monitoring, graphs, API for billing software (PPPoE + MikroTik API is used by almost all local billing softwares in Cambodia: CamISP, SoftPOS, SmartBilling, etc.).
+- **Scalability:**  Start with 1 OLT 8 PON ports → 512 customers. Add more OLT later, just connect new OLT to another port on MikroTik, same configuration.
+
+## Why Cambodia Choose This Combination
+**Device:**  Reason why it is popular right now
+- **MikroTik** - One-time license (CCR1036 or RB4011 ~500–800 USD can serve 3000–5000 customers easily)
+               - PPPoE + Queue Tree very stable
+               - Almost every technician in Cambodia knows MikroTik
+               - Free WinBox, very fast configuration
