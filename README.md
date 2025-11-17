@@ -32,3 +32,17 @@ Huawei OLTs are reliable for GPON but more complex than BDCOM—use CLI (Telnet/
     style ONU1 fill:#16a34a,color:white
     style Internet fill:#0ea5e9,color:white
 ```
+## Small Version
+```mermaid
+ flowchart LR
+    Internet --> MK[MikroTik PPPoE + VLAN 1001–3999]
+    MK -->|Trunk| OLT[Huawei MA5608T]
+    OLT -->|PON| SPL[Splitter]
+    SPL --> ONU1[ONU1 → VLAN1001] --> C1[Customer1]
+    SPL --> ONU2[ONU2 → VLAN1002] --> C2[Customer2]
+    SPL -->|…| ONUn[ONUn → VLAN n] --> Cn[Customern]
+
+    style MK fill:#dc2626,color:#fff
+    style OLT fill:#2563eb,color:#fff
+    style ONU1,ONU2,ONUn fill:#16a34a,color:#fff
+```
