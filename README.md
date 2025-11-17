@@ -11,9 +11,8 @@ Huawei OLTs are reliable for GPON but more complex than BDCOM—use CLI (Telnet/
 - **Torch & Packet Sniffer:**  Find who downloads torrent 24h very fast
 - **VLAN per customer**  No broadcast storm, very secure
 
-```bash
 flowchart LR
-
+```bash
     A["MikroTik Router<br>ether2 (Trunk)<br>VLAN 100 = Internet<br><br>IP: 192.0.2.1/24<br>Gateway: OLT 192.0.2.2"]
     B["Huawei OLT<br>Uplink GE0/1 (Trunk)<br>PON 0/1/1<br>Service-Port VLAN 100"]
     C["ONU (Bridge Mode)<br>UNI Port 1<br>Customer CPE<br><br>Gets IP from MikroTik DHCP"]
