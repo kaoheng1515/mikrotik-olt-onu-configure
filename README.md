@@ -12,21 +12,21 @@ Huawei OLTs are reliable for GPON but more complex than BDCOM—use CLI (Telnet/
 - **VLAN per customer**  No broadcast storm, very secure
 
 ## Works Flow
+
 ```mermaid
-flowchart TD
+ flowchart TD
     Internet[Internet<br>Real Public IP or CGNAT] -->|Fiber / Ethernet| MK[MikroTik Router<br>CCR2004 / RB4011<br><br>ether1 = WAN<br>ether2 = SFP+ Trunk to OLT<br>All customer VLANs tagged]
     
-    MK -->|VLAN 100 tagged<br>DHCP Server on vlan100<br>IP pool 192.168.100.0/24| OLT[Huawei MA5608T OLT<br>GE0/1/0 = Trunk uplink<br>Allow VLAN 100 + 999 (mgmt)<br>Management IP 192.168.99.2]
+    MK -->|VLAN 100 tagged<br>DHCP Server on vlan100<br>IP pool 192.168.100.0/24| OLT[Huawei MA5608T OLT<br>GE0/1/0 = Trunk uplink<br>Allow VLAN 100 and VLAN 999 mgmt<br>Management IP 192.168.99.2]
     
-    OLT -->|PON 0/1 → 0/8<br>Service-port VLAN 100<br>Tag-transform transparent| SPL[Splitter 1:32 or 1:64]
+    OLT -->|PON 0/1 -> 0/8<br>Service-port VLAN 100<br>Tag-transform transparent| SPL[Splitter 1:32 or 1:64]
     
-    SPL --> ONU1[ONU #1<br>HG8546M / V-SOL<br>Bridge Mode<br>LAN1 → Customer Router<br>Gets 192.168.100.x from MikroTik]
+    SPL --> ONU1[ONU #1<br>HG8546M / V-SOL<br>Bridge Mode<br>LAN1 -> Customer Router<br>Gets 192.168.100.x from MikroTik]
     SPL --> ONU2[ONU #2<br>Same VLAN 100]
     SPL -->|...| ONU64[ONU #64<br>Max 64 per PON]
     
     ONU1 --> Customer1[Customer Wi-Fi Router<br>or PC Direct]
 
-    %% ---- STYLES ----
     style MK fill:#dc2626,color:white
     style OLT fill:#2563eb,color:white
     style ONU1 fill:#16a34a,color:white
